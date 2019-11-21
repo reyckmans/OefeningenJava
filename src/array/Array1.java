@@ -6,6 +6,8 @@ public class Array1 {
 	public static void main(String[]args) {
 		Array1 array = new Array1();
 		array.bewerking();
+		
+		
 	}
 	
 	public void bewerking(){
