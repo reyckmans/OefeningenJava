@@ -9,6 +9,9 @@ public class ScannerOefeningen {
 		 ScannerOefeningen scanneroefeningen = new ScannerOefeningen();
 		 scanneroefeningen.readinput();
 		 scanneroefeningen.readinput2();
+		 scanneroefeningen.readinput3();
+		 
+		 scanneroefeningen.readinput4();
 	 }
 	
 	private void readinput() {
@@ -20,16 +23,27 @@ public class ScannerOefeningen {
 	
 	
 	private void readinput2() {
-		//oefening scanner vraagt 2 getallen en berekent ze uit
+		//oefening scanner vraagt 2 getallen en telt ze op
 		System.out.println("Geef het eerste cijfer in aub:");
-		int getal1 = scanner.nextInt();
+		double getal1 = scanner.nextDouble();
 		
 		System.out.println("Geef het tweede cijfer in aub:");
-		int getal2 = scanner.nextInt();
+		double getal2 = scanner.nextDouble();
 		
-		int uitkomst = getal1 + getal2;
+		double uitkomst = getal1 + getal2;
 		
 		System.out.println("de uitkomst is gelijk aan: " + uitkomst);
 	}
 	
+	private void readinput3() {
+		//oefening scanner vraagt 2 getallen en deelt ze door elkaar
+		System.out.println("geef het eerste cijfer in aub:");
+		double getal1 = scanner.nextDouble();
+		
+		System.out.println("Geef het tweede cijfer in aub:");
+		double getal2 = scanner.nextDouble();
+		
+		double uitkomst = getal1 / getal2;
+		System.out.println("de uitkomst is gelijk aan: " + uitkomst);
+	}
 }
