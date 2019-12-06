@@ -1,4 +1,4 @@
-package DubbeleForLoop;
+package dubbeleForLoop;
 
 public class ForLoopInForLoop {
 	
