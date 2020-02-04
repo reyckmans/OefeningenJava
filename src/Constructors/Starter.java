@@ -1,10 +1,9 @@
-package zzVoorbeeldConstructors;
+package Constructors;
 
 public class Starter {
 
 	public static void main(String[]args) {
-		Auto polo = new Auto("United", false, 15,"united blue", new Motor(95, 175, 3, 5, false));
-		
+		Auto polo = new Auto("United", false, 15,"united blue", new Motor(95, 175, 3, 5, false, 70));
 		System.out.println("De auto zelf ==> " + "\n"
 		+ "Uitvoering: " + polo.uitvoering + "\n"
 		+ "Standaartvelg: " + polo.standaartvelg + "\n"

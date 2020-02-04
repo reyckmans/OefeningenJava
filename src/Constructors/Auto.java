@@ -1,4 +1,4 @@
-package zzVoorbeeldConstructors;
+package Constructors;
 
 public class Auto {
 	
