@@ -29,15 +29,26 @@ public class Starter {
 		
 		// random vraag kiezen
 		Random rndV = new Random();
-	    List<String> givenList = Arrays.asList("Een beroep met een….", "Een zoogdier…", "Een jongensnaam…", "Een meisjesnaam");
+	    List<String> givenList = Arrays.asList("Een beroep met een….", "Een zoogdier…", "Een jongensnaam…", "Een meisjesnaam","Wat zie je in de woonkamer…",
+	    		"Wat zie je op de boerderij….",
+	    		"Een insekt…",
+	    		"Kledingstuk/Schoeisel….",
+	    		"Noem een kleur….",
+	    		"Noem een land….",
+	    		"Meisjesnaam….",
+	    		"Noem een vissoort met een…..",
+	    		"Noem een vogelsoort…",
+	    		"Wat vind je in de keuken….",
+	    		"Wat vind je in de woonkamer….",
+	    		"Noem een bloem plant", "boom of struik….");
 	    
 	    int numberOfElements = 2;
 		
-	    for (int i = 0; i < numberOfElements; i++) {
+	    /*for (int i = 0; i < numberOfElements; i++) {
 	        int randomIndex = rndV.nextInt(givenList.size());
 	        String randomElement = givenList.get(randomIndex);
 	        givenList.remove(randomIndex);
-	    }
+	    }*/
 		
 		//frame
 		JFrame frame = new JFrame("Pim Pam Pet Online Edition");
@@ -67,15 +78,16 @@ public class Starter {
 		labelV.setSize(80,100);
 		
 		// button van de vraag
-		JButton buttonV = new JButton("Vraag");
-		buttonV.setSize(80,50);
-		buttonL.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				 labelL.setText(////////////);
-			}
-		});
+		 JButton buttonV = new JButton("Vraag");
+	        buttonV.setSize(80,50);
+	        buttonV.addActionListener(new ActionListener() {
+	            Random random = new Random();
+
+	            @Override
+	            public void actionPerformed(ActionEvent e) {
+	                 labelV.setText(givenList.get(random.nextInt(givenList.size())));
+	            }
+	        });
 		
 		
 		// zichtbaarheid functie
