@@ -13,42 +13,20 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import Collections.listInvullenViaForLoop;
+
 public class Starter {
+	
+	
 	
 	public static void main(String[] args) {
 		Starter spel = new Starter();
 		spel.createFrame();
+		
 	}
 	
 	public void createFrame() {
-		// rondom letter maken
-		String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-		Random rnd = new Random();
-		char c = chars.charAt(rnd.nextInt(chars.length()));
-		System.out.println(rnd); //test
 		
-		// random vraag kiezen
-		Random rndV = new Random();
-	    List<String> givenList = Arrays.asList("Een beroep met een….", "Een zoogdier…", "Een jongensnaam…", "Een meisjesnaam","Wat zie je in de woonkamer…",
-	    		"Wat zie je op de boerderij….",
-	    		"Een insekt…",
-	    		"Kledingstuk/Schoeisel….",
-	    		"Noem een kleur….",
-	    		"Noem een land….",
-	    		"Meisjesnaam….",
-	    		"Noem een vissoort met een…..",
-	    		"Noem een vogelsoort…",
-	    		"Wat vind je in de keuken….",
-	    		"Wat vind je in de woonkamer….",
-	    		"Noem een bloem plant", "boom of struik….");
-	    
-	    int numberOfElements = 2;
-		
-	    /*for (int i = 0; i < numberOfElements; i++) {
-	        int randomIndex = rndV.nextInt(givenList.size());
-	        String randomElement = givenList.get(randomIndex);
-	        givenList.remove(randomIndex);
-	    }*/
 		
 		//frame
 		JFrame frame = new JFrame("Pim Pam Pet Online Edition");
@@ -66,10 +44,11 @@ public class Starter {
 		JButton buttonL = new JButton("Letter");
 		buttonL.setSize(80,50);
 		buttonL.addActionListener(new ActionListener() {
-		
+			final RandomL rndL = new RandomL();
+			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				 labelL.setText("" + chars.charAt(rnd.nextInt(chars.length())));
+				 labelL.setText(rndL.makeRandomL()+"");
 			}
 		});
 		
@@ -82,10 +61,11 @@ public class Starter {
 	        buttonV.setSize(80,50);
 	        buttonV.addActionListener(new ActionListener() {
 	            Random random = new Random();
+	            final RandomV rndV = new RandomV();
 
 	            @Override
 	            public void actionPerformed(ActionEvent e) {
-	                 labelV.setText(givenList.get(random.nextInt(givenList.size())));
+	                 labelV.setText(rndV.makeRandomV()+"");
 	            }
 	        });
 		
