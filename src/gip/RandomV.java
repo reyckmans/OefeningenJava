@@ -5,11 +5,7 @@ import java.util.List;
 import java.util.Random;
 
 public class RandomV {
-	
-	// random vraag kiezen
-	public String makeRandomV() {
-		Random rndV = new Random();
-	    List<String> givenList = Arrays.asList("Een beroep met een….", "Een zoogdier…", "Een jongensnaam…", "Een meisjesnaam","Wat zie je in de woonkamer…",
+	 List<String> givenList = Arrays.asList("Een beroep met een….", "Een zoogdier…", "Een jongensnaam…", "Een meisjesnaam","Wat zie je in de woonkamer…",
 	    		"Wat zie je op de boerderij….",
 	    		"Een insekt…",
 	    		"Kledingstuk/Schoeisel….",
@@ -21,8 +17,13 @@ public class RandomV {
 	    		"Wat vind je in de keuken….",
 	    		"Wat vind je in de woonkamer….",
 	    		"Noem een bloem plant", "boom of struik….");
-	    
-	    int numberOfElements = 2;
-	    return makeRandomV();
+	
+	// random vraag kiezen
+	public String makeRandomV() {
+		Random rndV = new Random();
+	    int randomgetaltussenNulenGrottevandelijst = rndV.nextInt(givenList.size());
+	    String gekozenVraag = givenList.get(randomgetaltussenNulenGrottevandelijst);
+	    givenList.remove(gekozenVraag);
+	    return gekozenVraag;
 	}
 }
