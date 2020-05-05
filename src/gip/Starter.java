@@ -22,11 +22,9 @@ public class Starter {
 	public static void main(String[] args) {
 		Starter spel = new Starter();
 		spel.createFrame();
-		
-	}
+		}
 	
 	public void createFrame() {
-		
 		
 		//frame
 		JFrame frame = new JFrame("Pim Pam Pet Online Edition");
@@ -69,12 +67,16 @@ public class Starter {
 	            }
 	        });
 		
+	    //tekstvak
+	    JTextField textFieldT = new JTextField(20);
+	    String text = textFieldT.getText();
 		
-		// zichtbaarheid functie
+		// zichtbaarheid functie (visibility function: this ensures that my coded code is displayed on the computer screen.)
 		panel.add(buttonL);
 		panel.add(labelL);
 		panel.add(buttonV);
 		panel.add(labelV);
+		panel.add(textFieldT);
 		frame.setVisible(true);
 		
 		
