@@ -17,7 +17,7 @@ import Collections.listInvullenViaForLoop;
 
 public class Starter {
 	
-	
+	final RandomV rndV = new RandomV();
 	
 	public static void main(String[] args) {
 		Starter spel = new Starter();
@@ -26,6 +26,7 @@ public class Starter {
 	
 	public void createFrame() {
 		
+		rndV.readLijst();
 		//frame
 		JFrame frame = new JFrame("Pim Pam Pet Online Edition");
 		frame.setSize(800,800);
@@ -58,8 +59,6 @@ public class Starter {
 		 JButton buttonV = new JButton("Vraag");
 	        buttonV.setSize(80,50);
 	        buttonV.addActionListener(new ActionListener() {
-	            Random random = new Random();
-	            final RandomV rndV = new RandomV();
 
 	            @Override
 	            public void actionPerformed(ActionEvent e) {
@@ -67,6 +66,21 @@ public class Starter {
 	            }
 	        });
 		
+	    //button voor controleer
+	    JButton buttonC = new JButton("controleer");
+	    buttonC.setSize(80,50);
+	    buttonC.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				boolean antwoordcorrect = controlerenvraag.checkAntwoord(JTextField.getValue());
+				if (antwoordcorrect) {
+					//counter die ik nog moet maken ==> de score staat al op ControleVraags
+				}
+			}
+		});
+	    
 	    //tekstvak
 	    JTextField textFieldT = new JTextField(20);
 	    String text = textFieldT.getText();

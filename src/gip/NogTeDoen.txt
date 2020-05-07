@@ -1,0 +1,11 @@
+-contorleren op het antwoord (if/else)
+	knop maken voor controle
+	inlezen tekstvak naar variable
+	public boolean checkAnswer(vraag, antwoord)
+	scoren bijhouden (juist/fout)
+		counter
+-pront page maken voor het spel begind(naam en moeilijkehids graat)
+-naam + score in een sql file zetten
+-pagina opmaak
+-opdelen in verschillende classe
+
