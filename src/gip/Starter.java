@@ -18,6 +18,7 @@ import Collections.listInvullenViaForLoop;
 public class Starter {
 	
 	final RandomV rndV = new RandomV();
+	ControleVraag controle = new ControleVraag();
 	
 	public static void main(String[] args) {
 		Starter spel = new Starter();
@@ -65,6 +66,10 @@ public class Starter {
 	                 labelV.setText(rndV.makeRandomV()+"");
 	            }
 	        });
+	        
+	     //tekstvak
+	        JTextField textFieldT = new JTextField(20);
+		    String text = textFieldT.getText();
 		
 	    //button voor controleer
 	    JButton buttonC = new JButton("controleer");
@@ -74,16 +79,13 @@ public class Starter {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				boolean antwoordcorrect = controlerenvraag.checkAntwoord(JTextField.getValue());
+				boolean antwoordcorrect = controle.checkAntwoord(textFieldT.getText(),labelL.getText());
 				if (antwoordcorrect) {
 					//counter die ik nog moet maken ==> de score staat al op ControleVraags
 				}
 			}
 		});
 	    
-	    //tekstvak
-	    JTextField textFieldT = new JTextField(20);
-	    String text = textFieldT.getText();
 		
 		// zichtbaarheid functie (visibility function: this ensures that my coded code is displayed on the computer screen.)
 		panel.add(buttonL);
@@ -91,6 +93,7 @@ public class Starter {
 		panel.add(buttonV);
 		panel.add(labelV);
 		panel.add(textFieldT);
+		panel.add(buttonC);
 		frame.setVisible(true);
 		
 		

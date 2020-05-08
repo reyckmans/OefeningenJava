@@ -1,9 +1,11 @@
 -contorleren op het antwoord (if/else)
-	knop maken voor controle
-	inlezen tekstvak naar variable
-	public boolean checkAnswer(vraag, antwoord)
+	+knop maken voor controle
+		reset als je op de knop duwt, vraag en letter en tekstvak
+	+inlezen tekstvak naar variable
+	+public boolean checkAnswer(vraag, antwoord)
 	scoren bijhouden (juist/fout)
 		counter
+-gravic disigne
 -pront page maken voor het spel begind(naam en moeilijkehids graat)
 -naam + score in een sql file zetten
 -pagina opmaak
