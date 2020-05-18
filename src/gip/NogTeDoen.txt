@@ -6,8 +6,20 @@
 	scoren bijhouden (juist/fout)
 		counter
 -gravic disigne
--pront page maken voor het spel begind(naam en moeilijkehids graat)
+-front page maken voor het spel begind(naam en moeilijkehids graat)
 -naam + score in een sql file zetten
 -pagina opmaak
 -opdelen in verschillende classe
 
+-foutmelding als je niets invult
+
+
+-if timer 0 ==> reset  alles buiten hooft timer 
+
++een knop start ==> letter en vraag tegelijkertijd
++een knop volgende ==> 	+reset alles
+						+automatisch volgende letter
+						+automatsch volgende vraag
+						+automatsch cursor in teksvak
+-als je het fout hebt een fout melding
+-corect melding
