@@ -3,7 +3,7 @@ package gip;
 import java.util.Random;
 
 /**
- * deze classe zorgt er voor dat mijn spel een random letter genereerd. het weergeven gebeurt waneer men op de vraag knop drukt(deze staat geprogrameerd in de starter)
+ * deze classe zorgt er voor dat mijn spel een random letter genereerd. het weergeven gebeurt wanneer men op de vraag knop drukt(deze staat geprogrameerd in de starter)
  * @author Robbe Eyckmans
  * @see Starter.jave
  *

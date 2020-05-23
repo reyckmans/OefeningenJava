@@ -1,5 +1,6 @@
 package gip;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Arrays;
@@ -17,12 +18,16 @@ import javax.swing.Timer;
 import Collections.listInvullenViaForLoop;
 
 public class Starter {
-	
+	//panel
+		JPanel panel = new JPanel();
+		
+	//button volgende
 	JButton buttonVolgende = new JButton("Volgende");
+	//button speel
 	JButton buttonSpelen = new JButton("speel");
 	
 	//counter van timer 2
-	int time = 16;
+	int time = 15;
 	
 	//labelTime
 	JLabel labelT = new JLabel();
@@ -54,10 +59,9 @@ public class Starter {
 		rndV.readLijst();
 		//frame
 				JFrame frame = new JFrame("Pim Pam Pet Online Edition");
-				frame.setSize(800,800);
+				frame.setSize(1000,800);
 		
-		//penel
-				JPanel panel = new JPanel();
+		//panel
 				frame.add(panel);
 		
 		
@@ -81,6 +85,10 @@ public class Starter {
 		//tekstvak
 				JTextField textFieldT = new JTextField(20);
 				String text = textFieldT.getText();
+				
+		//label voor de scoren
+				JLabel labelS = new JLabel("/15");
+				labelS.setSize(40, 20);
 				
 		//buton voor te spelen
 				
@@ -118,9 +126,14 @@ public class Starter {
 						
 						labelCF.setText("CORRECT");
 						
-						timer2.stop();
+						panel.setBackground(Color.GREEN);
+						
+						buttonVolgende.doClick();
+						
+						timer2.start();
 						}else {
 							labelCF.setText("FOUT");
+							panel.setBackground(Color.RED);
 						}
 			}
 		});
@@ -133,7 +146,7 @@ public class Starter {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						buttonSpelen.doClick();
-						time = 16;
+						time = 15;
 						labelCF.setText("");
 						
 			}
@@ -155,7 +168,8 @@ public class Starter {
 		panel.add(labelT);
 		panel.add(labelT2);
 		panel.add(buttonVolgende);
-		panel.add(labelCF);
+		panel.add(labelS); //label voor de score
+		panel.add(labelCF); //melding juist of fout
 		frame.setVisible(true);
 			
 	}
