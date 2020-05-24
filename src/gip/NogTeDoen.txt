@@ -23,3 +23,8 @@
 						+automatsch cursor in teksvak
 -als je het fout hebt een fout melding
 -corect melding
+-max 15 vragen bij laatste vraag stopt het spel
+
+-versie 1 is alleen de makkelijkste van het alfabed 
+-versie 2 is heel het alfabet 
+-versie 3 je moet alle vragen 100% juist beantwooden

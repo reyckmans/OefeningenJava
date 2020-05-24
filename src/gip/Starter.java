@@ -87,7 +87,7 @@ public class Starter {
 				String text = textFieldT.getText();
 				
 		//label voor de scoren
-				JLabel labelS = new JLabel("/15");
+				JLabel labelS = new JLabel(controle.score + "/15");
 				labelS.setSize(40, 20);
 				
 		//buton voor te spelen
@@ -109,8 +109,6 @@ public class Starter {
 		                 textFieldT.requestFocusInWindow();
 					}
 				});
-
-	     
 		
 	    //button voor controleer
 				JButton buttonC = new JButton("controleer");
@@ -154,8 +152,31 @@ public class Starter {
 	        
 	        
 	        //timer.stop();
- 
-	    
+
+		//panel begin scherm
+
+		//panel
+			JPanel panelS = new JPanel();
+			frame.add(panelS);
+									
+		//buton makkelijk
+			JButton buttonMakkelijk = new JButton("MAKKELIJK");
+			buttonMakkelijk.setSize(80,50);
+			buttonMakkelijk.addActionListener(new ActionListener() {
+				
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					// TODO Auto-generated method stub
+					if (buttonMakkelijk.doClick()) {
+						//ga naar "pannel1"
+					}
+				}
+			});
+			
+			
+		//button moeilijk
+			panelS.add(buttonMakkelijk);
+		
 		
 		// zichtbaarheid functie (visibility function: this ensures that my coded code is displayed on the computer screen.)
 		panel.add(buttonSpelen);
@@ -171,6 +192,11 @@ public class Starter {
 		panel.add(labelS); //label voor de score
 		panel.add(labelCF); //melding juist of fout
 		frame.setVisible(true);
+		
+		
+
+
+
 			
 	}
 	
