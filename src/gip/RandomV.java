@@ -33,7 +33,7 @@ public class RandomV {
 		}
 		
 	}
-
+	
 	// random vraag kiezen
 	public String makeRandomV() {
 		Random rndV = new Random();
