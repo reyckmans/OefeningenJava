@@ -1,6 +1,7 @@
 package gip;
 
 import java.awt.Color;
+import java.awt.color.ColorSpace;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Arrays;
@@ -16,10 +17,14 @@ import javax.swing.JTextField;
 import javax.swing.Timer;
 
 import Collections.listInvullenViaForLoop;
+import jdk.internal.net.http.frame.ResetFrame;
 
 public class Starter {
 	//panel
 		JPanel panel = new JPanel();
+		
+	//standaart achtergrond
+		private Color panelColor;
 		
 	//button volgende
 	JButton buttonVolgende = new JButton("Volgende");
@@ -40,6 +45,9 @@ public class Starter {
 	  
 	//timer 2 per vraag
 	  Timer timer2 = new Timer(1000, createTimerActionListener2());
+	  
+	//timer voor terug naar originele kleur
+	  Timer timerK = new Timer(500, createTimerActionListenerK());
 	  
 	//label voor correct of fout
 		JLabel labelCF = new JLabel();
@@ -124,14 +132,20 @@ public class Starter {
 						
 						labelCF.setText("CORRECT");
 						
+						timerK.start();
+						
 						panel.setBackground(Color.GREEN);
 						
 						buttonVolgende.doClick();
 						
 						timer2.start();
+						
+						textFieldT.setText("");
 						}else {
 							labelCF.setText("FOUT");
 							panel.setBackground(Color.RED);
+							textFieldT.setText("");
+							textFieldT.requestFocusInWindow();
 						}
 			}
 		});
@@ -151,32 +165,32 @@ public class Starter {
 		});
 	        
 	        
-	        //timer.stop();
-
-		//panel begin scherm
-
-		//panel
-			JPanel panelS = new JPanel();
-			frame.add(panelS);
-									
-		//buton makkelijk
-			JButton buttonMakkelijk = new JButton("MAKKELIJK");
-			buttonMakkelijk.setSize(80,50);
-			buttonMakkelijk.addActionListener(new ActionListener() {
-				
-				@Override
-				public void actionPerformed(ActionEvent e) {
-					// TODO Auto-generated method stub
-					if (buttonMakkelijk.doClick()) {
-						//ga naar "pannel1"
-					}
-				}
-			});
-			
-			
-		//button moeilijk
-			panelS.add(buttonMakkelijk);
-		
+//	        //timer.stop();
+//
+//		//panel begin scherm
+//
+//		//panel
+//			JPanel panelS = new JPanel();
+//			frame.add(panelS);
+//									
+//		//buton makkelijk
+//			JButton buttonMakkelijk = new JButton("MAKKELIJK");
+//			buttonMakkelijk.setSize(80,50);
+//			buttonMakkelijk.addActionListener(new ActionListener() {
+//				
+//				@Override
+//				public void actionPerformed(ActionEvent e) {
+//					// TODO Auto-generated method stub
+//					if (buttonMakkelijk.doClick()) {
+//						//ga naar "pannel1"
+//					}
+//				}
+//			});
+//			
+//			
+//		//button moeilijk
+//			panelS.add(buttonMakkelijk);
+//		
 		
 		// zichtbaarheid functie (visibility function: this ensures that my coded code is displayed on the computer screen.)
 		panel.add(buttonSpelen);
@@ -225,6 +239,17 @@ public class Starter {
 				}
 	            //display time in label
 	            labelT2.setText(time + "");
+			}
+		};
+	}
+	public ActionListener createTimerActionListenerK() {
+		return new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				timer.stop();
+				panel.setBackground(null);
 			}
 		};
 	}

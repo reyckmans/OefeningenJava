@@ -28,3 +28,6 @@
 -versie 1 is alleen de makkelijkste van het alfabed 
 -versie 2 is heel het alfabet 
 -versie 3 je moet alle vragen 100% juist beantwooden
+
++groen tijdelijk na goed antwoord ==> swing timer  
++textfielt leeg maken na goed antwoord 
