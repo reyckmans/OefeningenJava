@@ -8,6 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -31,6 +32,9 @@ public class Starter {
 	JButton buttonVolgende = new JButton("Volgende");
 	//button speel
 	JButton buttonSpelen = new JButton("speel");
+	
+	//achtergrond
+	ImageIcon background = new ImageIcon("achtergrond.jpg"); 
 	
 	//counter van timer 2 (dit is de defintie van mijn timer en hoeveel seconden hij heeft
 	int time = 15;
@@ -72,8 +76,6 @@ public class Starter {
 		
 		//panel
 				frame.add(panel);
-		
-		
 		
 		//label voor letter
 				JLabel labelL = new JLabel();

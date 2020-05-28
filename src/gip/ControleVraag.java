@@ -9,22 +9,15 @@ import java.sql.Statement;
 
 public class ControleVraag {
 
-	Connection con;
 	int score = 0;
 	
-	public ControleVraag() {
-		try {
-			con = DriverManager.getConnection("jdbc:sqlite:databasePimPamPet.db");
-		} catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("Error connecting to database");
-		}
-	}
+	ConectiesMetDB conV = new ConectiesMetDB();
+	
 	
 	public boolean checkAntwoord(String antwoord,String letter) {
 		if (antwoord.toLowerCase().toCharArray()[0]== letter.toLowerCase().toCharArray()[0]) {
 			try {
-				PreparedStatement ps = con.prepareStatement("SELECT * FROM oplossingen WHERE oplossing LIKE ?");
+				PreparedStatement ps = conV.PrepareStatement("SELECT * FROM oplossingen WHERE oplossing LIKE ?");
 				ps.setString(1, antwoord + "%");
 				ps.execute();
 				ResultSet resultset = ps.getResultSet();
