@@ -14,8 +14,9 @@ public class ControleVraag {
 	
 	public ControleVraag() {
 		try {
-			con = DriverManager.getConnection("jdbc:sqlite:D:\\School\\School 2019-2020\\OOP\\Oefeningen\\OefeningenJava\\OefeningenJava\\src\\gip\\databasePimPamPet.db");
+			con = DriverManager.getConnection("jdbc:sqlite:databasePimPamPet.db");
 		} catch (Exception e) {
+			e.printStackTrace();
 			System.out.println("Error connecting to database");
 		}
 	}
@@ -33,6 +34,7 @@ public class ControleVraag {
 					return true;
 				}
 				else {
+					System.out.println("fout");
 					return false;
 				}
 			} catch (SQLException e) {

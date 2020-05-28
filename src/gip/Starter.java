@@ -1,5 +1,5 @@
 package gip;
-
+// dit zijn al mijn copelingen, deze dienen voor het verweizen naar klassen die door java gemaakt zijn en een eigen voorafgeprogrameerde functie hebben
 import java.awt.Color;
 import java.awt.color.ColorSpace;
 import java.awt.event.ActionEvent;
@@ -17,8 +17,9 @@ import javax.swing.JTextField;
 import javax.swing.Timer;
 
 import Collections.listInvullenViaForLoop;
-import jdk.internal.net.http.frame.ResetFrame;
 
+
+// dit is mijn starter classe, dit zorgt er voor dat mijn spel voledich werkt en ook echt iets doet.
 public class Starter {
 	//panel
 		JPanel panel = new JPanel();
@@ -31,7 +32,7 @@ public class Starter {
 	//button speel
 	JButton buttonSpelen = new JButton("speel");
 	
-	//counter van timer 2
+	//counter van timer 2 (dit is de defintie van mijn timer en hoeveel seconden hij heeft
 	int time = 15;
 	
 	//labelTime
@@ -99,7 +100,6 @@ public class Starter {
 				labelS.setSize(40, 20);
 				
 		//buton voor te spelen
-				
 				buttonSpelen.setSize(80,50);
 				buttonSpelen.addActionListener(new ActionListener() {
 					final RandomL rndL = new RandomL();
@@ -206,11 +206,6 @@ public class Starter {
 		panel.add(labelS); //label voor de score
 		panel.add(labelCF); //melding juist of fout
 		frame.setVisible(true);
-		
-		
-
-
-
 			
 	}
 	
