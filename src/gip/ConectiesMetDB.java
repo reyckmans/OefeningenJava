@@ -3,7 +3,7 @@ package gip;
 import java.sql.DriverManager;
 /**
  * 
- * 
+ * dit is mijn klasse die er voor zorgt dat mijn SQL datebase geconecteerd staat met mijn spel, zodat ik de vragen en voorspelde antwoorden waarmee men verbeter uit mijn lijst kan halen en mee kan werken.
  * 
  * 
  * 
