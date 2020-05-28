@@ -1,4 +1,14 @@
 package gip;
+
+/**
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
+
 // dit zijn al mijn copelingen, deze dienen voor het verweizen naar klassen die door java gemaakt zijn en een eigen voorafgeprogrameerde functie hebben
 import java.awt.Color;
 import java.awt.color.ColorSpace;

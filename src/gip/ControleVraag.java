@@ -1,5 +1,14 @@
 package gip;
 
+/**
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -11,13 +20,12 @@ public class ControleVraag {
 
 	int score = 0;
 	
-	ConectiesMetDB conV = new ConectiesMetDB();
-	
+	ConectiesMetDB con = new ConectiesMetDB();
 	
 	public boolean checkAntwoord(String antwoord,String letter) {
 		if (antwoord.toLowerCase().toCharArray()[0]== letter.toLowerCase().toCharArray()[0]) {
 			try {
-				PreparedStatement ps = conV.PrepareStatement("SELECT * FROM oplossingen WHERE oplossing LIKE ?");
+				PreparedStatement ps = con.PrepareStatement("SELECT * FROM oplossingen WHERE oplossing LIKE ?");
 				ps.setString(1, antwoord + "%");
 				ps.execute();
 				ResultSet resultset = ps.getResultSet();
