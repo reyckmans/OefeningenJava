@@ -20,16 +20,11 @@ public class ControleVraag {
 
 	int score = 0;
 	
-	ConectiesMetDB con = new ConectiesMetDB();
+	ConectiesMetDB connectiesMetDB = new ConectiesMetDB();
 	
 	public boolean checkAntwoord(String antwoord,String letter) {
 		if (antwoord.toLowerCase().toCharArray()[0]== letter.toLowerCase().toCharArray()[0]) {
-			try {
-				PreparedStatement ps = con.PrepareStatement("SELECT * FROM oplossingen WHERE oplossing LIKE ?");
-				ps.setString(1, antwoord + "%");
-				ps.execute();
-				ResultSet resultset = ps.getResultSet();
-				if (resultset.getFetchSize() > 0) {
+				if (connectiesMetDB.retrieveFromDB(antwoord)) {
 					score++;
 					System.out.println("juist");
 					return true;
@@ -38,11 +33,12 @@ public class ControleVraag {
 					System.out.println("fout");
 					return false;
 				}
-			} catch (SQLException e) {
-				// TODO: handle exception
-				e.printStackTrace();
 			}
-		}
-	return false;
+		return false;
+	}
+	
+	public static void main(String[] args) {
+		ControleVraag controle = new ControleVraag();
+		System.out.println(controle.checkAntwoord("mazda", "m"));
 	}
 }
