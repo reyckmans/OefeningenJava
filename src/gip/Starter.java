@@ -2,11 +2,18 @@ package gip;
 
 /**
  * 
+ * Dit is mijn strater classe, dit is de basis van mijn spel. 
+ * In deze classe staat al de codes die je nodig hebt voor het uiterlijk van het spel zoals de achtrond waar alle knoppen opstaan of de knoppen zelf.
+ * In deze classe worden ook alle functies onder de koppen geplaas.
  * 
+ * SPEEL KNOP
+ * Als je op de knop speel duwt zal er een random gekozen vraag en letter op het scherm verscheinen en zal er de mogeleikheid zijn om op de knop controleren te drukken. 
+ * ook zal de cursor automatisch in het tekstvak te komen staan zodat je smakkelijk kan typen.
+ * er zullen ook twee timers beginnen te tellen. een die bijhoud hoelang je over het hele spel doet en een die aftelt van de aantal soconden die je krijgt voor die ene vraag te beantwoorden.
  * 
- * 
- * 
- * 
+ * CONTROLEER KNOP
+ * Als je deze knop gebruikt zal het programa je vraag controleren of je de vraag juist hebt beantwoord of niet.
+ * Bij een fout antwoord zal het scherm rood oplichten en krijg je een melding dat je de vrag fout hebt beantwoord. Je mag de vraag blijven proberen op telossen zolang als je nog tijd hebt. als de tijd op is zal het spel automisch overgaan naar de volgende vraag.
  */
 
 // dit zijn al mijn copelingen, deze dienen voor het verweizen naar klassen die door java gemaakt zijn en een eigen voorafgeprogrameerde functie hebben
