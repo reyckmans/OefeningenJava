@@ -31,7 +31,7 @@ package gip;
 */
 
 
-// dit zijn al mijn copelingen, deze dienen voor het verweizen naar klassen die door java gemaakt zijn en een eigen voorafgeprogrameerde functie hebben
+
 import java.awt.Color;
 import java.awt.color.ColorSpace;
 import java.awt.event.ActionEvent;
@@ -52,20 +52,20 @@ import javax.swing.Timer;
 import Collections.listInvullenViaForLoop;
 
 
-// dit is mijn starter classe, dit zorgt er voor dat mijn spel voledich werkt en ook echt iets doet.
+
 public class Starter {
 	//panel
 		JPanel panel = new JPanel();
 		
-	//standaart achtergrond
+	// standard background
 		private Color panelColor;
 		
-	//button volgende
+	// button next
 	JButton buttonVolgende = new JButton("Volgende");
 	//button speel
 	JButton buttonSpelen = new JButton("speel");
 	
-	//achtergrond
+	//background
 	ImageIcon background = new ImageIcon("achtergrond.jpg"); 
 	
 	//counter van timer 2 (dit is de defintie van mijn timer en hoeveel seconden hij heeft
@@ -77,16 +77,16 @@ public class Starter {
 	//labelTime2
 	JLabel labelT2 = new JLabel();
 	
-	//timer ==> nog optesplitsen
+	// timer 1
 	  Timer timer = new Timer(1000, createTimerActonListener());
 	  
-	//timer 2 per vraag
+	// timer 2 for question
 	  Timer timer2 = new Timer(1000, createTimerActionListener2());
 	  
-	//timer voor terug naar originele kleur
+	// timer for return to original color
 	  Timer timerK = new Timer(500, createTimerActionListenerK());
 	  
-	//label voor correct of fout
+	// label for correct or wrong
 		JLabel labelCF = new JLabel();
 	
 	final RandomV rndV = new RandomV();
@@ -109,31 +109,31 @@ public class Starter {
 		//panel
 				frame.add(panel);
 		
-		//label voor letter
+		//label for letter
 				JLabel labelL = new JLabel();
 				labelL.setSize(40, 20); //ik weet niet of dit werk?
 		
-		//label voor met woord letter
+		// label for the word letter
 				JLabel labelWL = new JLabel("Letter :");
 				labelWL.setSize(40, 20);
 		
-		//label voor vragen
+		// label for questions
 				JLabel labelV = new JLabel();
 				labelV.setSize(80,100);
 				
-		//label voor woord vraag
+		// label for word question
 				JLabel labelWV = new JLabel("Vraag :");
 				labelWV.setSize(40, 20); 
 				
-		//tekstvak
+		// text box
 				JTextField textFieldT = new JTextField(20);
 				String text = textFieldT.getText();
 				
-		//label voor de scoren
+		// label for the scoring
 				JLabel labelS = new JLabel(controle.score + "/15");
 				labelS.setSize(40, 20);
 				
-		//buton voor te spelen
+		// play buton
 				buttonSpelen.setSize(80,50);
 				buttonSpelen.addActionListener(new ActionListener() {
 					final RandomL rndL = new RandomL();
@@ -152,7 +152,7 @@ public class Starter {
 					}
 				});
 		
-	    //button voor controleer
+		// button for check
 				JButton buttonC = new JButton("controleer");
 				buttonC.setSize(80,50);
 				buttonC.addActionListener(new ActionListener() {
@@ -161,7 +161,7 @@ public class Starter {
 					public void actionPerformed(ActionEvent e) {
 						boolean antwoordcorrect = controle.checkAntwoord(textFieldT.getText(),labelL.getText());
 						if (antwoordcorrect) {
-						//counter die ik nog moet maken ==> de score staat al op ControleVraags
+						// counter that I have yet to make ==> the score is already on ControleVraags
 						System.out.println("timer stop");
 						
 						labelCF.setText("CORRECT");
@@ -184,7 +184,7 @@ public class Starter {
 			}
 		});
 		
-		//button voor volgende
+		// button for next
 				
 				buttonVolgende.setSize(80,50);
 				buttonVolgende.addActionListener(new ActionListener() {
@@ -226,7 +226,7 @@ public class Starter {
 //			panelS.add(buttonMakkelijk);
 //		
 		
-		// zichtbaarheid functie (visibility function: this ensures that my coded code is displayed on the computer screen.)
+		// visibility function: this ensures that my coded code is displayed on the computer screen.
 		panel.add(buttonSpelen);
 		panel.add(labelWL);
 		panel.add(labelL);

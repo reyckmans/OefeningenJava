@@ -20,7 +20,7 @@ import java.util.Random;
  */
 public class RandomL {
 
-	// rondom letter maken
+	// make random letter
 	public char makeRandomL() {
 		String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		Random rnd = new Random();

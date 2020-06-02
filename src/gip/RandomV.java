@@ -47,7 +47,7 @@ public class RandomV {
 		
 	}
 	
-	// random vraag kiezen
+	// choose random question
 	public String makeRandomV() {
 		Random rndV = new Random();
 	    int randomgetaltussenNulenGrottevandelijst = rndV.nextInt(givenList.size());
