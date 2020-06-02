@@ -6,13 +6,17 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 /**
- * 
- * Dit is mijn klasse die er voor zorgt dat mijn SQL datebase geconecteerd staat met mijn spel, zodat ik de vragen en voorspelde antwoorden waarmee men verbeter uit mijn lijst kan halen en mee kan werken.
- * 
- * 
- * 
- * 
- */
+*
+* This class ensures that my SQL datebase is connected to my game, so that I can get the questions and predicted answers to improve my list and work with them.
+* First of all my method is named, it will be named "Con".
+* Later in the code you will see on line 27 that the reference is made to the paht of my Database. This is necessary otherwise the Database cannot be used. This is in a Try / Catch (further explanation can be found in the class "RandomV").
+* The code in line 34 is entirely is written to get the correct information from the DataBase.
+* The main event takes place on line 37, here the literal code is written with which the solutions will be retrieved from the DataBase. This looks like "SELECT * FROM solutions WHERE solution LIKE?".
+* All this will be placed in a Try / Catch again.
+* The ResultSet is also essential, with this operation I’m going to check the result that one gets from the database if it is the right one that is needed.
+* One must also get a "Return" here. A "Return" allows you to see that they are going to take something out of the concept / code before doing an operation or something else with it and then putting it back into the code.
+*/
+
 
 public class ConectiesMetDB {
 	

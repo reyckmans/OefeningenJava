@@ -1,20 +1,35 @@
 package gip;
 
 /**
- * 
- * Dit is mijn strater classe, dit is de basis van mijn spel. 
- * In deze classe staat al de codes die je nodig hebt voor het uiterlijk van het spel zoals de achtrond waar alle knoppen opstaan of de knoppen zelf.
- * In deze classe worden ook alle functies onder de koppen geplaas.
- * 
- * SPEEL KNOP
- * Als je op de knop speel duwt zal er een random gekozen vraag en letter op het scherm verscheinen en zal er de mogeleikheid zijn om op de knop controleren te drukken. 
- * ook zal de cursor automatisch in het tekstvak te komen staan zodat je smakkelijk kan typen.
- * er zullen ook twee timers beginnen te tellen. een die bijhoud hoelang je over het hele spel doet en een die aftelt van de aantal soconden die je krijgt voor die ene vraag te beantwoorden.
- * 
- * CONTROLEER KNOP
- * Als je deze knop gebruikt zal het programa je vraag controleren of je de vraag juist hebt beantwoord of niet.
- * Bij een fout antwoord zal het scherm rood oplichten en krijg je een melding dat je de vrag fout hebt beantwoord. Je mag de vraag blijven proberen op telossen zolang als je nog tijd hebt. als de tijd op is zal het spel automisch overgaan naar de volgende vraag.
- */
+*@author Robbe Eyckmans
+*
+* This is my Strarter class, this is the basis of my game.
+* This class contains all the codes you need for the appearance of the game such as the octagon where all buttons are located or the buttons themselves.
+* In this class, all functions are also placed under the headings.
+*
+* PLAY BUTTON
+* When you press the play button, a randomly selected question and letter will appear on the screen and there will be the option to press the check button.
+* The cursor will automatically be placed in the text box for easy typing.
+* Two timers will also start to count. One that keeps track of how long you have been doing throughout the game and one that counts down the number of seconds you get for answering that one question.
+*
+* CHECK BUTTON
+* If you use this button, the program will check your question whether you have answered the question correctly or not.
+* If you answer incorrectly, the screen will light up red and you will be notified that you have answered the question incorrectly. You can keep trying to solve the question as long as you have time. when the time is up, the game will automatically move to the next question.
+* If the answer is correct, the screen will light up green. The game will automatically advance to the next question.
+* The following thing I want to do is to see how many points you have. With every correct answer you get a point.
+* I also want to make sure that if you press the check button while you have not entered anything, you will receive an error message that you have not entered anything yet.
+*
+* NEXT BUTTON
+* The following button is made for if you don't know the answer to a question. You can press this button which will do the following: the time will be reset to 15 seconds and you will get a new question with a new letter. Meaning the question you didn’t know the answer to, gets skipped. The cursor will also point back to the text box for easy typing.
+*
+* LABELS AND TIMERS
+* Outside of the buttons you will also see many JLabels and Timers coming back. These are also defined here.
+* A JLabel is actually a name card that you can put anywhere in your background (also called Panel). These are usually used to provide additional information or to print the letters or questions in the same way as in my game.
+* The Timers are self-explanatory, these are the elements of the timer here you can put a "function" (also called a method) that counts down how many seconds you have or how long you are working on something.
+* 
+* It is important to know that the classes RandomL and classes RandomV are linked under the button "Speel" that is created and listed in this class.
+*/
+
 
 // dit zijn al mijn copelingen, deze dienen voor het verweizen naar klassen die door java gemaakt zijn en een eigen voorafgeprogrameerde functie hebben
 import java.awt.Color;
