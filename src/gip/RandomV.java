@@ -29,8 +29,8 @@ import java.util.Scanner;
 
 
 public class RandomV {
-	URL url = getClass().getResource("RandomVlijst.txt");
-	File onveranderbarelijst = new File("src/gip/RandomVlijst.txt");
+//	URL url = getClass().getResource("RandomVlijst.txt");
+//	File onveranderbarelijst = new File("src/gip/RandomVlijst.txt");
 	List<String> givenList = new ArrayList<String>();
 	ConectiesMetDB conectiesMetDB;
 	
@@ -40,18 +40,18 @@ public class RandomV {
 	}
 	
 	public void readLijst() {
-		try {
-			Scanner scanner = new Scanner(onveranderbarelijst);
-			String randomV = "";
-			while (scanner.hasNext()) {
-				String input = scanner.nextLine();
-				givenList.add(input);
-			}
-		} catch (FileNotFoundException e) { //als je bestand niet gevonden is is dt de foutmelding.
-			System.out.println("sorry, je bestant is niet gevonden");
-			e.printStackTrace();
-		}
-		
+//		try {
+//			Scanner scanner = new Scanner(onveranderbarelijst);
+//			String randomV = "";
+//			while (scanner.hasNext()) {
+//				String input = scanner.nextLine();
+//				givenList.add(input);
+//			}
+//		} catch (FileNotFoundException e) { //als je bestand niet gevonden is is dt de foutmelding.
+//			System.out.println("sorry, je bestant is niet gevonden");
+//			e.printStackTrace();
+//		}
+		givenList = conectiesMetDB.retrieveQuestionsFromDB();
 	}
 	
 	// choose random question
