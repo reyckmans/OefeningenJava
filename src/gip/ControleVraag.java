@@ -30,7 +30,11 @@ public class ControleVraag {
 
 	int score = 0;
 	
-	ConectiesMetDB connectiesMetDB = new ConectiesMetDB();
+	ConectiesMetDB connectiesMetDB;
+	
+	public ControleVraag(ConectiesMetDB connectiesMetDB) {
+		this.connectiesMetDB = connectiesMetDB;
+	}
 	
 	public boolean checkAntwoord(String antwoord,String letter) {
 		if (antwoord.toLowerCase().toCharArray()[0]== letter.toLowerCase().toCharArray()[0]) {

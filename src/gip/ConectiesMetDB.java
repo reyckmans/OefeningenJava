@@ -1,10 +1,15 @@
 package gip;
 
+import java.sql.Array;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 /**
 *
 * This class ensures that my SQL datebase is connected to my game, so that I can get the questions and predicted answers to improve my list and work with them.
@@ -30,6 +35,24 @@ public class ConectiesMetDB {
 			System.out.println("Error connecting to database");
 		}
 	}
+	
+	public List<String> retrieveQuestionsFromDB(){
+		PreparedStatement ps;
+		try {
+			ps = con.prepareStatement("SELECT * FROM Vragen");
+			ps.execute();
+			ResultSet resultset = ps.getResultSet();
+			List<String> resultlist = new ArrayList<String>();
+			while (resultset.next()) {
+				resultlist.add(resultset.getString("vraag"));
+			}
+			return resultlist;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 	
 	public boolean retrieveFromDB(String antwoordGebruiker) {
 		PreparedStatement ps;

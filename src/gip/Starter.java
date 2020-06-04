@@ -88,9 +88,9 @@ public class Starter {
 	  
 	// label for correct or wrong
 		JLabel labelCF = new JLabel();
-	
-	final RandomV rndV = new RandomV();
-	ControleVraag controle = new ControleVraag();
+		ConectiesMetDB connectiesMetDB= new ConectiesMetDB();
+	final RandomV rndV = new RandomV(connectiesMetDB);
+	ControleVraag controle = new ControleVraag(connectiesMetDB);
 	
 	public static void main(String[] args) {
 		Starter spel = new Starter();
