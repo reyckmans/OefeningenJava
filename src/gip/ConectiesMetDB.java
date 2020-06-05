@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+
 /**
 *
 * This class ensures that my SQL datebase is connected to my game, so that I can get the questions and predicted answers to improve my list and work with them.
@@ -18,7 +19,7 @@ import java.util.List;
 * The code in line 34 is entirely is written to get the correct information from the DataBase.
 * The main event takes place on line 37, here the literal code is written with which the solutions will be retrieved from the DataBase. This looks like "SELECT * FROM solutions WHERE solution LIKE?".
 * All this will be placed in a Try / Catch again.
-* The ResultSet is also essential, with this operation I’m going to check the result that one gets from the database if it is the right one that is needed.
+* The ResultSet is also essential, with this operation Iï¿½m going to check the result that one gets from the database if it is the right one that is needed.
 * One must also get a "Return" here. A "Return" allows you to see that they are going to take something out of the concept / code before doing an operation or something else with it and then putting it back into the code.
 */
 
@@ -57,15 +58,21 @@ public class ConectiesMetDB {
 	public boolean retrieveFromDB(String antwoordGebruiker) {
 		PreparedStatement ps;
 		try {
-			ps = con.prepareStatement("SELECT * FROM oplossingen WHERE oplossing LIKE ?");
-			ps.setString(1, antwoordGebruiker + "%");
+			ps = con.prepareStatement("SELECT * FROM oplossingen WHERE lower(oplossing) LIKE lower(?)");
+			ps.setString(1, antwoordGebruiker);
 			ps.execute();
 			ResultSet resultset = ps.getResultSet();
-			return resultset.getFetchSize() > 0;
+			return resultset.next();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return false;
 	}
+	
+//	public static void main(String[] args) {
+//		ConectiesMetDB c = new ConectiesMetDB();
+//		boolean retrieveFromDB = c.retrieveFromDB("bas");
+//		System.out.println(retrieveFromDB);
+//	}
 }
