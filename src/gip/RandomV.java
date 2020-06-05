@@ -30,7 +30,7 @@ import java.util.Scanner;
 
 public class RandomV {
 //	URL url = getClass().getResource("RandomVlijst.txt");
-//	File onveranderbarelijst = new File("src/gip/RandomVlijst.txt");
+//	File onveranderbarelijst = new File("src/gip/RandomVlijst.txt"); 
 	List<String> givenList = new ArrayList<String>();
 	ConectiesMetDB conectiesMetDB;
 	
