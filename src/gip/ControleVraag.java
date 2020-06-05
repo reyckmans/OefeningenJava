@@ -50,9 +50,4 @@ public class ControleVraag {
 			}
 		return false;
 	}
-	
-	public static void main(String[] args) {
-		ControleVraag controle = new ControleVraag();
-		System.out.println(controle.checkAntwoord("mazda", "m"));
-	}
 }
