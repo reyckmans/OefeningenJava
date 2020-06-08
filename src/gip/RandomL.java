@@ -30,11 +30,14 @@ public class RandomL {
 	// Make random letter
 	public char makeRandomL(int idvraag) {
 //		String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-//		Random rnd = new Random();
+		Random rnd = new Random();
 //		char c = chars.charAt(rnd.nextInt(chars.length()));
 //		return c;
 		List<String> retrieveLettersFromDB = conectiesMetDB.retrieveLettersFromDB(idvraag);
-		
+		String gekozenLetter = retrieveLettersFromDB.get(rnd.nextInt(retrieveLettersFromDB.size()-1));
+		char c = gekozenLetter.charAt(0);
+		System.out.println(c);
+		return c;
 		//random uithalen
 	}
 			
