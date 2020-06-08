@@ -73,6 +73,7 @@ public class ConectiesMetDB {
 //	public static void main(String[] args) {
 //		ConectiesMetDB c = new ConectiesMetDB();
 //		boolean retrieveFromDB = c.retrieveFromDB("bas");
-//		System.out.println(retrieveFromDB);
+//	
+	//System.out.println(retrieveFromDB);
 //	}
 }
