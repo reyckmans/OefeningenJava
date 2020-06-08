@@ -33,6 +33,9 @@ package gip;
 
 
 import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.GridBagLayout;
+import java.awt.GridLayout;
 import java.awt.color.ColorSpace;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -49,7 +52,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.Timer;
 
-import Collections.listInvullenViaForLoop;
 
 
 
@@ -106,8 +108,9 @@ public class Starter {
 				JFrame frame = new JFrame("Pim Pam Pet Online Edition");
 				frame.setSize(1000,800);
 		
+				
 		//panel
-				frame.add(panel);
+				
 		
 		//label for letter
 				JLabel labelL = new JLabel();
@@ -227,6 +230,8 @@ public class Starter {
 //		
 		
 		// visibility function: this ensures that my coded code is displayed on the computer screen.
+				
+				panel.setLayout(new GridLayout(0,2));
 		panel.add(buttonSpelen);
 		panel.add(labelWL);
 		panel.add(labelL);
@@ -239,6 +244,7 @@ public class Starter {
 		panel.add(buttonVolgende);
 		panel.add(labelS); //label voor de score
 		panel.add(labelCF); //melding juist of fout
+		frame.add(panel);
 		frame.setVisible(true);
 			
 	}
