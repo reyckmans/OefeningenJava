@@ -70,6 +70,22 @@ public class ConectiesMetDB {
 		return false;
 	}
 	
+	List<String> retrieveLettersFromDB(){
+		PreparedStatement ps;
+		try {
+			ps = con.prepareStatement("SELECT DISTINCT SUBSTRING(oplossing, 1, 1) FROM oplossingen WHERE FK = '1'");
+			ps.execute();
+			ResultSet resultset = ps.getResultSet();
+			List<String> resultlist = new ArrayList<String>();
+			while (resultset.next()) {
+				resultlist.add(resultset.getString("letter"));
+			}
+			return resultlist;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
 //	public static void main(String[] args) {
 //		ConectiesMetDB c = new ConectiesMetDB();
 //		boolean retrieveFromDB = c.retrieveFromDB("bas");
