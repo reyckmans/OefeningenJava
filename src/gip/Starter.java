@@ -139,13 +139,13 @@ public class Starter {
 		// play buton
 				buttonSpelen.setSize(80,50);
 				buttonSpelen.addActionListener(new ActionListener() {
-					final RandomL rndL = new RandomL();
+					final RandomL rndL = new RandomL(connectiesMetDB);
 					
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						 labelL.setText(rndL.makeRandomL()+"");
+						labelV.setText(rndV.makeRandomV()+"");
+						 labelL.setText(rndL.makeRandomL(rndV.currectVraagID)+"");
 						 
-						 labelV.setText(rndV.makeRandomV()+"");
 		                 
 						 timer.start();
 						 

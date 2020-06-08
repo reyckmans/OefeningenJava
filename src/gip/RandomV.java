@@ -33,7 +33,7 @@ public class RandomV {
 //	File onveranderbarelijst = new File("src/gip/RandomVlijst.txt"); 
 	List<String> givenList = new ArrayList<String>();
 	ConectiesMetDB conectiesMetDB;
-	
+	public int currectVraagID = 0;
 	
 	public RandomV(ConectiesMetDB conectiesMetDB) {
 		this.conectiesMetDB = conectiesMetDB;
@@ -59,6 +59,7 @@ public class RandomV {
 		Random rndV = new Random();
 	    int randomgetaltussenNulenGrottevandelijst = rndV.nextInt(givenList.size());
 	    String gekozenVraag = givenList.get(randomgetaltussenNulenGrottevandelijst);
+	    this.currectVraagID = randomgetaltussenNulenGrottevandelijst;
 	    givenList.remove(gekozenVraag);
 	    return gekozenVraag;
 	}

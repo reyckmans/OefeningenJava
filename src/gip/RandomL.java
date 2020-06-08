@@ -1,5 +1,6 @@
 package gip;
 
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -19,13 +20,22 @@ import java.util.Random;
  * Finally, a method random is made on line 26. this ensures that each separate element of the string appears in different sequences.
  */
 public class RandomL {
+	
+	ConectiesMetDB conectiesMetDB;
+	
+	public RandomL(ConectiesMetDB conectiesMetDB) {
+		this.conectiesMetDB = conectiesMetDB;
+	}
 
 	// Make random letter
-	public char makeRandomL() {
-		String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-		Random rnd = new Random();
-		char c = chars.charAt(rnd.nextInt(chars.length()));
-		return c;
+	public char makeRandomL(int idvraag) {
+//		String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+//		Random rnd = new Random();
+//		char c = chars.charAt(rnd.nextInt(chars.length()));
+//		return c;
+		List<String> retrieveLettersFromDB = conectiesMetDB.retrieveLettersFromDB(idvraag);
+		
+		//random uithalen
 	}
 			
 }

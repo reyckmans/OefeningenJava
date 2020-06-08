@@ -70,7 +70,7 @@ public class ConectiesMetDB {
 		return false;
 	}
 	
-	List<String> retrieveLettersFromDB(){
+	List<String> retrieveLettersFromDB(int idvraag){
 		PreparedStatement ps;
 		try {
 			ps = con.prepareStatement("SELECT DISTINCT SUBSTRING(oplossing, 1, 1) FROM oplossingen WHERE FK = '1'");
