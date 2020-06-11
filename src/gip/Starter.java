@@ -52,6 +52,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.Timer;
 
+import net.miginfocom.swing.MigLayout;
+
 
 
 
@@ -106,11 +108,18 @@ public class Starter {
 		rndV.readLijst();
 		//frame
 				JFrame frame = new JFrame("Pim Pam Pet Online Edition");
-				frame.setSize(1000,800);
+				frame.setSize(450,450);
 		
 				
 		//panel
 				
+		//label for timer text game
+				JLabel labelTTG = new JLabel("Game Timer:");
+				labelTTG.setSize(40, 20);
+				
+		//label for timer text game
+				JLabel labelTTV = new JLabel("Question Timer:");
+				labelTTV.setSize(40, 20);
 		
 		//label for letter
 				JLabel labelL = new JLabel();
@@ -133,7 +142,7 @@ public class Starter {
 				String text = textFieldT.getText();
 				
 		// label for the scoring
-				JLabel labelS = new JLabel(controle.score + "/15");
+				JLabel labelS = new JLabel(controle.score + "/3");
 				labelS.setSize(40, 20);
 				
 		// play buton
@@ -231,19 +240,24 @@ public class Starter {
 		
 		// visibility function: this ensures that my coded code is displayed on the computer screen.
 				
-				panel.setLayout(new GridLayout(0,2));
-		panel.add(buttonSpelen);
-		panel.add(labelWL);
-		panel.add(labelL);
-		panel.add(labelWV);
-		panel.add(labelV);
-		panel.add(textFieldT);
-		panel.add(buttonC);
-		panel.add(labelT);
-		panel.add(labelT2);
-		panel.add(buttonVolgende);
-		panel.add(labelS); //label voor de score
-		panel.add(labelCF); //melding juist of fout
+		panel.setLayout(new MigLayout());
+		panel.add(buttonSpelen, "cell 0 0");
+		panel.add(labelS, "cell 2 0"); //label voor de score
+		panel.add(buttonC, "cell 5 0");
+		panel.add(labelWL , "cell 1 1");
+		panel.add(labelL, "cell 2 1");
+		panel.add(labelWV, "cell 3 1");
+		panel.add(labelV, "cell 4 1");
+		panel.add(textFieldT, "cell 1 2 4 1");
+		
+		panel.add(labelTTG, "cell 0 3");
+		panel.add(labelT, "cell 1 3");
+		panel.add(labelTTV, "cell 5 3");
+		panel.add(labelT2, "cell 6 3");
+		panel.add(labelCF, "cell 0 4"); //melding juist of fout
+		panel.add(buttonVolgende, "cell 0 5");
+		
+		
 		frame.add(panel);
 		frame.setVisible(true);
 			

@@ -31,3 +31,6 @@
 
 +groen tijdelijk na goed antwoord ==> swing timer  
 +textfielt leeg maken na goed antwoord 
+
+- corect logo 
+- timer bij vlgende
