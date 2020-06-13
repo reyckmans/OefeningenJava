@@ -52,6 +52,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.Timer;
 
+import com.sun.source.tree.Scope;
+
 import net.miginfocom.swing.MigLayout;
 
 
@@ -185,6 +187,11 @@ public class Starter {
 						buttonVolgende.doClick();
 						
 						timer2.start();
+						
+						int score = 0;
+						score++;
+						
+						System.out.println(score);
 						
 						textFieldT.setText("");
 						}else {
