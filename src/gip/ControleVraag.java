@@ -40,6 +40,7 @@ public class ControleVraag {
 		if (antwoord.toLowerCase().toCharArray()[0]== letter.toLowerCase().toCharArray()[0]) {
 				if (connectiesMetDB.retrieveFromDB(antwoord)) {
 					score++;
+					System.out.println(score);
 					System.out.println("juist");
 					return true;
 				}

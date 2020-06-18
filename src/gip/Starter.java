@@ -187,12 +187,7 @@ public class Starter {
 						buttonVolgende.doClick();
 						
 						timer2.start();
-						
-						int score = 0;
-						score++;
-						
-						System.out.println(score);
-						
+
 						textFieldT.setText("");
 						}else {
 							labelCF.setText("FOUT");
